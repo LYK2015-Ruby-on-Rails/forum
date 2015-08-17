@@ -36,7 +36,7 @@ class PostsController < ApplicationController
     end
 
     def set_topic
-    	@topic = Topic.find(params[:topic_id])
+    	@topic = Topic.friendly.find(params[:topic_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
