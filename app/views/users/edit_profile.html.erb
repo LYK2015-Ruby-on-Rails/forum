@@ -1,2 +1,4 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<%= form_for current_user, :url => users_update_profile_path, method: :post, :html => { :multipart => true } do |form| %>
+  <%= form.file_field :avatar %>
+  <%= form.submit %>
+<% end %>

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'users/edit_profile', to: "users#edit_profile"
+  post 'users/update_profile', to: "users#update_profile"
 
   resources :topics do
     resources :posts
