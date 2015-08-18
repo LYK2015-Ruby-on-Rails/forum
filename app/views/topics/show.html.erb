@@ -12,7 +12,11 @@
 
 <%= link_to 'Edit', edit_topic_path(@topic) %> |
 <%= link_to 'Back', topics_path %>
-<%= link_to "New Post", new_topic_post_path(@topic) %>
+<%= link_to "New Post", new_topic_post_path(@topic) %> </br>
+
+<% @categories.each do |category| %>
+  <%= link_to category.name, category %></br>
+<% end %>
 
 <h1>Listing Posts</h1>
 

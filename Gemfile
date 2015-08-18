@@ -52,3 +52,6 @@ gem "paperclip", "~> 4.3"
 gem 'kaminari'
 
 gem 'rails_admin'
+
+gem 'pry-rails'
+gem 'pry'

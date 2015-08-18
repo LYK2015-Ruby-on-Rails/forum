@@ -15,6 +15,14 @@
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
+
+  <div class="field">
+    <% @categories.each do |category| %>
+      <input type="checkbox" name="category_ids[]" value="<%= category.id %>"/>
+      <%= f.label category.name %>
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
