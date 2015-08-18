@@ -55,3 +55,4 @@ gem 'rails_admin'
 
 gem 'pry-rails'
 gem 'pry'
+gem 'cancancan', '~> 1.10'
