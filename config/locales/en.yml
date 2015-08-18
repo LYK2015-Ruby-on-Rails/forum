@@ -21,3 +21,10 @@
 
 en:
   hello: "Hello world"
+  store:
+    title: "Boyner"
+  topic_created: "Topic was successfully created"
+  post:
+    created: "Post was successfully created"
+  new_post: "New Post"
+  greetings: "<div>Welcome, %{email}</div>"

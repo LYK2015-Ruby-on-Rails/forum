@@ -1,0 +1,8 @@
+tr:
+  store:
+    title: "Defacto"
+  topic_created: "Başlık başarıyla oluşturuldu."
+  post:
+    created: "İçerik başarıyla oluşturuldu."
+  new_post: "Yeni İçerik"
+  greetings: "<div>Hoşgeldin, %{email}</div>"
