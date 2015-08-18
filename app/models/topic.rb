@@ -2,7 +2,7 @@ class Topic < ActiveRecord::Base
 	extend FriendlyId
   friendly_id :title, use: :slugged
 
-	paginates_per 2
+	paginates_per 5
 
 	validates :title, presence: true
 	validates :title, length: {minimum: 1, maximum: 140}

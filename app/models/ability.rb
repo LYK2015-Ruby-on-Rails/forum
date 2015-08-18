@@ -8,7 +8,7 @@ class Ability
       can :manage, :all
       can :access, :rails_admin
     elsif user.is_moderator?
-      can :manage, Topic
+      can :manage, [Topic, Post]
     else
       can :read, :all
     end

@@ -1,4 +1,6 @@
 class TopicsController < ApplicationController
+  load_and_authorize_resource
+
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
   before_action :set_categories, only: [:new, :edit]
 
