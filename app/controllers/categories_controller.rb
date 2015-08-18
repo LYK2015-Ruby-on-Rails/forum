@@ -15,7 +15,7 @@ class CategoriesController < ApplicationController
 	end
 
 	def show
-		
+		@topics = @category.topics
 	end
 
 	private
