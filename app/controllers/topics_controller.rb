@@ -8,6 +8,11 @@ class TopicsController < ApplicationController
   # GET /topics.json
   def index
     @topics = Topic.all.page params[:page]
+
+    respond_to do |format|
+      format.json { render json: @topics }
+      format.html
+    end
   end
 
   # GET /topics/1
@@ -15,6 +20,11 @@ class TopicsController < ApplicationController
   def show
     @posts = @topic.posts
     @categories = @topic.categories
+
+    respond_to do |format|
+      format.json { render json: @topic }
+      format.html
+    end
   end
 
   # GET /topics/new

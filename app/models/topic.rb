@@ -11,4 +11,8 @@ class Topic < ActiveRecord::Base
 	has_many :posts
 	has_many :category_topics
 	has_many :categories, through: :category_topics
+
+	def active_model_serializer
+		TopicSerializer
+	end
 end
