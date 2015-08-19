@@ -88,6 +88,15 @@ class TopicsController < ApplicationController
     end
   end
 
+  def remove_category
+    @topic = Topic.friendly.find(params[:topic_id])
+    @category = Category.find(params[:category_id])
+    CategoryTopic.find_by_topic_id_and_category_id(@topic.id, @category.id).destroy
+    respond_to do |format|
+      format.js {render "remove"}
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_topic

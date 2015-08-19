@@ -17,9 +17,13 @@
 <% end %>
  </br>
 
+<ul>
 <% @categories.each do |category| %>
-  <%= link_to category.name, category %></br>
+  <li class="<%= category.id %>">
+  <%= link_to category.name, category %> <%= link_to "Kategoriyi çıkar", topic_remove_category_path(@topic, category), remote: true %></br>
+  </li>
 <% end %>
+</ul>
 
 <h1>Listing Posts</h1>
 

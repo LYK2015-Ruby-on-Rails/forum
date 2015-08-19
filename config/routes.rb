@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post 'users/update_profile', to: "users#update_profile"
 
   resources :topics do
+    get 'remove_category/:category_id', to: "topics#remove_category", as: :remove_category
     resources :posts
   end
   devise_for :users
