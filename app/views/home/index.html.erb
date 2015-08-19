@@ -6,6 +6,7 @@
 <%= link_to "New Category", new_category_path %>
 <%= link_to "Profile Edit", users_edit_profile_path %>
 
-<%= raw t('greetings', email: current_user.email) %>
+<%= raw t('greetings', email: current_user.email) %></br>
+<%= formatted_address(current_user.address) %></br>
 
 <%= l(Time.now) %>

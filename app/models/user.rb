@@ -4,6 +4,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  serialize :address
+
+  attr_reader :country, :city, :town, :detail
+
   has_many :topics
   has_many :posts
 

@@ -4,6 +4,8 @@ class UsersController < ApplicationController
 
   def update_profile
     @user = current_user.update( user_params )
+    address = {country: params[:user][:country], city: params[:user][:city], town: params[:user][:town], detail: params[:user][:detail]}
+    current_user.update_attributes(address: address)
     redirect_to root_path
   end
 

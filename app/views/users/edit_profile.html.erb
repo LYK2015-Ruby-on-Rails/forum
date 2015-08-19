@@ -1,4 +1,12 @@
 <%= form_for current_user, :url => users_update_profile_path, method: :post, :html => { :multipart => true } do |form| %>
+	<%= form.label :country %>
+	<%= form.text_field :country %>
+	<%= form.label :city %>
+	<%= form.text_field :city %>
+	<%= form.label :town %>
+	<%= form.text_field :town %>
+	<%= form.label :detail %>
+	<%= form.text_field :detail %>
   <%= form.file_field :avatar %>
   <%= form.submit %>
 <% end %>
