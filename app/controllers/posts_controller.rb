@@ -8,6 +8,10 @@ class PostsController < ApplicationController
 		@post = Post.new
 	end
 
+	def show
+		render json: @post
+	end
+
 	def create
 		@post = current_user.posts.create(post_params)
 		@post.update_attributes(topic_id: @topic.id)
